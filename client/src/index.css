@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import 'tailwindcss';
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: #020403;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme='light'] body {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+button {
+    cursor: pointer;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    display: inline-flex;
+    animation: marquee 16s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-float {
+    animation: float 5s ease-in-out infinite;
+}
+
+.glass-panel {
+    background: rgba(6, 95, 70, 0.3);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(74, 222, 128, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.btn-secondary {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    background: rgba(6, 95, 70, 0.4);
+    color: #ffffff;
+    font-weight: 600;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(74, 222, 128, 0.15);
+    transition: all 300ms;
+}
+
+.btn-secondary:hover {
+    background: rgba(6, 95, 70, 0.5);
+}
